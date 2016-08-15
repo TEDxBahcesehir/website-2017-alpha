@@ -1,0 +1,88 @@
+/*
+	TEDx Bahcesehir Main Page
+	Author: Mert Akengin
+*/
+
+* { transition:0.2s; }
+
+HTML, BODY {
+	background-color:black;
+	font-family:'Open Sans';
+	margin:0;
+	padding:0;
+}
+
+.img {
+	background-color:transparent;
+	background-position:center;
+	background-size:auto;
+	background-clip:border-box;
+	background-attachment:local;
+	background-repeat:no-repeat;
+}
+
+.content {
+	display:block;
+	width:100%;
+	height:100%;
+	font-size:0;
+	text-align:center;
+	text-decoration:none;
+	box-sizing:border-box;
+	overflow:hidden;
+}
+.content VIDEO {
+	position:relative;
+	display:block;
+	min-width:100%;
+	min-height:100%;
+	width:auto;
+	height:auto;
+	object-fit:cover;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.content SPAN {
+	display:block;
+	position:absolute;
+	font-size:4rem;
+	font-weight:200;
+	background-color:rgba(0,0,0,0.4);
+	color:white;
+	padding:32vh 0;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	box-sizing:border-box;
+	text-shadow:-1px -1px 1px white;
+	vertical-align:middle;
+}
+.content SPAN.sm {
+	top:initial;
+	left:0;
+	right:0;
+	bottom:0;
+	height:80px;
+	min-width:0;
+	min-height:0;
+	width:auto;
+	font-size:0;
+	padding:0;
+	text-align:center;
+	background-color:rgba(255,255,255,0.5);
+}
+.sm A {
+	width:48px;
+	height:48px;
+	display:inline-block;
+	background-clip:content-box;
+	font-size:0;
+	padding:0;
+	border-radius:50%;
+	background-size:contain;
+	position:relative;
+	margin:16px 8px;
+}
+.sm A:hover { -webkit-filter:sepia(1); }
