@@ -17,18 +17,29 @@
 			<video src="./res/v.mp4" preload=auto autoplay muted loop poster="./res/nomovie.jpg" ></video>
 			<span>2017 için hazırlanıyoruz!..</span>
 			<span class='sm'>
+				<a class='ext' target=_blank href='#' >partner ol!</a>
 				<a class='img' target=_blank href='//facebook.com/TEDxBahcesehirUniversity-1603137146620273'
 				data-img='./res/facebook.png' >.</a>
 				<a class='img' target=_blank href='//twitter.com/tedx_bahcesehir' data-img='./res/twitter.png' >.</a>
+				<a class='ext' target=_blank href='#' >fikir ver!</a>
 				<a class='img' target=_blank href='//youtube.com/watch?v=-ejVR8xqkfs&list=PLsRNoUx8w3rPPMbavzVWG-2zd2Z0gw1Nk' data-img='./res/youtube.png' >.</a>
 				<a class='img' target=_blank href='//instagram.com/tedxbahcesehiruniversity' data-img='./res/instagram.png' >.</a>
 				<!-- a class='img' href='#' data-img='./res/other.png' >.</a-->
+				<a class='ext' target=_blank href='#' >ekibe katıl!</a>
 			</span>
 		</div>
-		<!--script src="./main.js" async defer ></script>
+		<!--script src="./main.js" async defer ></script-->
+		<!--script type="text/javascript" src="./velocity.min.js" ></script -->
 		<script type="text/javascript" >
-			console.log("load ok");
-		</script-->
+			window.onload = function(e) {
+				//console.log(this,e);
+				bbar = document.getElementsByClassName("sm")[0];
+				for(i=0;i<bbar.clientWidth/2;i++)
+					setTimeout('bbar.scrollLeft = '
+						+ i + ';', i*2);
+				return;
+			};
+		</script>
 		<script type="text/javascript" src="./image.js" async defer ></script>
 	</body>
 </html>
