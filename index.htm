@@ -36,7 +36,9 @@
 				bbar = document.getElementsByClassName("sm")[0];
 				for(i=0;i<bbar.clientWidth;i++)
 					setTimeout('bbar.scrollLeft = '
-						+ (bbar.clientWidth-i) + ';', i*3);
+						+ (bbar.clientWidth-i) + ';',
+						Math.pow(i,2)/234
+					);
 				return;
 			};
 		</script>
