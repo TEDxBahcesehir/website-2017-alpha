@@ -104,8 +104,17 @@ HTML, BODY {
 	background-clip:border-box;
 	text-transform:capitalize;
 	min-height:32px;
-	margin:12px 8px;
+	margin:12px 6px;
 }
 .content DIV.sm.sm-small {
 	height:64px;
+}
+
+@keyframes cool {
+	from {
+		filter:grayscale(1.0) blur(4px);
+	}
+	to {
+		filter:grayscale(0.0) blur(0px);
+	}
 }
