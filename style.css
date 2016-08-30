@@ -32,7 +32,7 @@ HTML, BODY {
 	box-sizing:border-box;
 	overflow:hidden;
 }
-.content VIDEO {
+.content VIDEO, .content IFRAME {
 	position:relative;
 	display:block;
 	min-width:100%;
@@ -44,10 +44,11 @@ HTML, BODY {
 	left:50%;
 	transform:translate(-50%,-50%);
 }
+.content IFRAME { min-height:calc(100% + 48px); }
 .content DIV {
 	display:block;
 	position:absolute;
-	font-size:4rem;
+	font-size:3.5rem;
 	font-weight:200;
 	background-color:rgba(0,0,0,0.4);
 	color:white;

@@ -104,6 +104,12 @@ var caps = [
 	},
 ];
 			window.onload = function(e) {
+				if(window.location.hash.substr(1) == "partners") {
+					document.getElementsByClassName("content")[0].innerHTML = 
+						"<iframe src='//e.issuu.com/embed.html#0/38346198' frameborder=0 allowfullscreen ></iframe>";
+					window.history.pushState("teststr", "Partnerlik", "../partnerlik_imkanlari");
+					return;
+				}
 				//console.log(this,e);
 				bbar = document.getElementsByClassName("sm")[0];
 				for(i=0;i<bbar.clientWidth;i++)
