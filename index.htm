@@ -18,8 +18,8 @@
 			<div class='main' ><span id="caption" ></span><span id="cursor">|</span></div>
 			<div class='sm sm-small' style='top:0;' >
 				<a class='ext' target=_blank href='//goo.gl/forms/716kvr3268cLhx1q1' >fikir ver!</a>
+				<a class='ext' target=_blank href='//goo.gl/forms/mHe6FjqxTmW9YaTj2' >ekibe katıl!</a>
 				<a class='ext' target=_blank href='#' >partner ol!</a>
-				<a class='ext' target=_blank href='#' >ekibe katıl!</a>
 			</div>
 			<div class='sm' style='bottom:0;' >
 				<a class='img' target=_blank href='//facebook.com/TEDxBahcesehirUniversity-1603137146620273'
@@ -93,14 +93,17 @@ var caps = [
 	{
 		"text": "",
 		"delay": 0,
-	},
-	{
-		"text": "partner@tedxbahcesehir.com",
-		"delay": 5000,
+		"time": 0,
 	},
 	{
 		"text": "Başvurular 19 Eylül'de!",
 		"delay": 5555,
+		"time": 1474243200000,
+	},
+	{
+		"text": "partner@tedxbahcesehir.com",
+		"delay": 5000,
+		"time": 9999999999999,
 	},
 ];
 			window.onload = function(e) {
@@ -116,6 +119,8 @@ var caps = [
 					links[i].dataset["text"] = caps[i].text;
 					links[i].dataset["delay"] = caps[i].delay;
 					links[i].onclick = function(e) {
+						if(Date.now() > caps[i].time)
+							return true;
 						if(lock)
 							return false;
 						//document.getElementsByTagName("span")[0].innerHTML =
