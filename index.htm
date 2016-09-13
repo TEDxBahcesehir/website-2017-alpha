@@ -118,8 +118,9 @@ var caps = [
 				for(i=1;i<3;i++) {
 					links[i].dataset["text"] = caps[i].text;
 					links[i].dataset["delay"] = caps[i].delay;
+					links[i].dataset["time"] = caps[i].time;
 					links[i].onclick = function(e) {
-						if(Date.now() > caps[i].time)
+						if(Date.now() > this.dataset.time)
 							return true;
 						if(lock)
 							return false;
