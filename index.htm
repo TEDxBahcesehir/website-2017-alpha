@@ -17,8 +17,8 @@
 			<video src="./res/v.mp4" preload=auto autoplay muted loop poster="//tedxbahcesehir.com/img/scene.jpg" style='animation:cool 5s 1 linear forwards;'></video>
 			<div class='main' ><span id="caption" ></span><span id="cursor">|</span></div>
 			<div class='sm sm-small' style='top:0;' >
+				<a class='ext' target=_blank href='//goo.gl/forms/716kvr3268cLhx1q1' >fikir ver!</a>
 				<a class='ext' target=_blank href='#' >partner ol!</a>
-				<a class='ext' target=_blank href='#' >fikir ver!</a>
 				<a class='ext' target=_blank href='#' >ekibe katıl!</a>
 			</div>
 			<div class='sm' style='bottom:0;' >
@@ -91,11 +91,11 @@ var timer = false;
 var dcap = "2017 için hazırlanıyoruz";
 var caps = [
 	{
-		"text": "partner@tedxbahcesehir.com",
-		"delay": 5000,
+		"text": "",
+		"delay": 0,
 	},
 	{
-		"text": "...",
+		"text": "partner@tedxbahcesehir.com",
 		"delay": 5000,
 	},
 	{
@@ -112,7 +112,7 @@ var caps = [
 						Math.pow(i,2)/234
 					);
 				links = document.getElementsByTagName("A");
-				for(i=0;i<3;i++) {
+				for(i=1;i<3;i++) {
 					links[i].dataset["text"] = caps[i].text;
 					links[i].dataset["delay"] = caps[i].delay;
 					links[i].onclick = function(e) {
