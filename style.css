@@ -118,3 +118,10 @@ HTML, BODY {
 		filter:grayscale(0.0) blur(0px);
 	}
 }
+
+@keyframes blinky {
+	from { opacity:1; }
+	to { opacity:0; }
+}
+
+#cursor { animation: blinky 0.2s infinite alternate ease-in-out; }
