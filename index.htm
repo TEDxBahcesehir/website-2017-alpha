@@ -71,14 +71,16 @@ var timer = false;
 var dcap = "2017 için hazırlanıyoruz";
 var caps = [
 	{
-		"text": " ",
+		"text": "",
 		"delay": 0,
 		"time": 0,
+		"ab": 'a',
 	},
 	{
 		"text": "partner@tedxbahcesehir.com",
 		"delay": 5000,
-		"time": 999999999999999,
+		"time": 99999999999999,
+		"ab": 'a',
 	},
 ];
 			window.onload = function(e) {
@@ -90,12 +92,15 @@ var caps = [
 						Math.pow(i,2)/234
 					);
 				links = document.getElementsByTagName("A");
-				for(i=1;i<2;i++) {
+				for(i=0;i<links.length && i<caps.length;i++) {
+					if(links[i].dataset.length == 0)
+						continue;
 					links[i].dataset["text"] = caps[i].text;
 					links[i].dataset["delay"] = caps[i].delay;
 					links[i].dataset["time"] = caps[i].time;
+					links[i].dataset["ab"] = caps[i].ab;
 					links[i].onclick = function(e) {
-						if(Date.now() > this.dataset.time)
+						if( (Date.now() > this.dataset.time && this.dataset.ab === 'a') || (Date.now() < this.dataset.time && this.dataset.ab === 'b') )
 							return true;
 						if(lock)
 							return false;
